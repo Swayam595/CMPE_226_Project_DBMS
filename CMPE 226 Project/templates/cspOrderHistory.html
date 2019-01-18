@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Account Details</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/3.3/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="../static/css/signup.css" rel="stylesheet">
+    <script src="../static/js/jquery-3.3.1.js"></script>
+    <script src="../static/js/cspOrderHistory.js"></script>
+  </head>
+  <body>
+    <div class="container" style="font-size:small">
+      <div class="header">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+      <li role="presentation" ><a href="showCsp">Dashboard</a></li>
+              <li role="presentation" ><a href="showCspMachines">Machines</a></li>
+            <li role="presentation" class="active"><a href="showCspOrderHistory">Order History</a></li>
+            <li role="presentation"><a href="showCspBilling">Billing</a></li>
+            <li role="presentation"><a href="showCspProfile">Profile</a></li>
+			    <li role="presentation" ><a href="showCspHelp">Help</a></li>
+				<li role="presentation" ><a href="/">Logout</a></li>
+          </ul>
+        </nav>
+        <h4 class="text-muted">CSP Dashboard</h4>
+      </div>
+
+      <div class="jumbotron">
+        <h2> <b>Cloud Service Provider</b></h2>
+          <h3>Order History</h3>
+
+
+          <table class="table table-bordered">
+            <thead class = "table-dark">
+            <tr>
+                <th>Order_Id</th>
+                <th>Order Start Date</th>
+                <th>Number of Machines</th>
+                <th>CPU_Cores</th>
+                <th>RAM</th>
+                <th>Disk Size</th>
+                <th>Order End Date</th>
+            </tr>
+            </thead>
+            <tbody class="orderHistory">
+            </tbody>
+        </table>
+
+
+ <div class="panel panel-danger">
+                <div class="panel-heading" > </div>
+
+    </div>
+
+
+
+
+      <footer class="footer">
+        <p>&copy; CMPE 226</p>
+      </footer>
+    </div>
+  </body>
+</html>

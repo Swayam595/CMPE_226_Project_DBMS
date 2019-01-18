@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Account Details</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/3.3/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="../static/css/signup.css" rel="stylesheet">
+    <script src="../static/js/jquery-3.3.1.js"></script>
+    <script src="../static/js/adminCSP.js"></script>
+  </head>
+  <body>
+    <div class="container" style="font-size:small">
+      <div class="header">
+        <nav>
+              <ul class="nav nav-pills pull-right">
+     <li role="presentation" ><a href="showAdmin">Dashboard</a></li>
+              <li role="presentation" ><a href="showAdminMachines">Machines</a></li>
+            <li role="presentation" ><a href="showAdminOrder">Orders</a></li>
+            <li role="presentation" ><a href="showAdminCustomers">Customer</a></li>
+            <li role="presentation" class="active"><a href="showAdminCSP">CSP</a></li>
+                          <li role="presentation"><a href="showAdminOffer">Offers/Plans</a></li>
+                    <li role="presentation"><a href="showAdminBilling">Billing</a></li>
+				    <li role="presentation" ><a href="showAdminComplaints">Complaints</a></li>
+                 <li role="presentation" ><a href="showAdminProfile">Profile</a></li>
+				<li role="presentation" ><a href="/">Logout</a></li>
+          </ul>
+        </nav>
+        <h4 class="text-muted">Admin Dashboard</h4>
+      </div>
+
+      <div class="jumbotron">
+        <h2> <b>Cloud Aggregator</b></h2>
+            <h3>CSP Info.</h3>
+
+          <table class="table table-bordered">
+
+        <thead class = "table-dark">
+            <tr>
+                <th>CSP_ID</th>
+                 <th>Name</th>
+                <th>Email_Id</th>
+                <th>Join Date</th>
+                <th>Bank Account No.</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody class="currentOrders">
+        </tbody>
+		</table>
+
+        <!--button type="button" class="btn btn-primary btn-sm btn-block" data-toggle="modal" data-target="#myModal">Add New CSP</button-->
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" style="padding-top: 10px"><b>Add New CSP</b></h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <form style="padding: 20px;" class="placeOrderForm">
+                        <div class="form-group row">
+                            <label for="cspid" class="col-4 col-form-label">CSP_id*</label>
+                            <div class="col-8">
+                                <input id="cspid" value="" name="cspid" placeholder="Enter cspid" class="form-control here" type="number">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="Name" class="col-4 col-form-label">Name*</label>
+                            <div class="col-8">
+                                <input id="Name" value="" name="Name" placeholder="Enter Name" class="form-control here" type="text">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="Email" class="col-4 col-form-label">Email*</label>
+                            <div class="col-8">
+                                <input id="Email" name="Email" value="" placeholder="Enter Email" class="form-control here" type="Email">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="password" class="col-4 col-form-label">Password*</label>
+                            <div class="col-8">
+                                <input id="password" name="password" value="" placeholder="Enter Password" class="form-control here" type="password">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="bank" class="col-4 col-form-label">Bank Account No.</label>
+                            <div class="col-8">
+                                <input id="bank" name="bank" value="bank" placeholder="Enter Bank Account No." class="form-control here" type="number">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="machineid" class="col-4 col-form-label">Machine_Id</label>
+                            <div class="col-8">
+                                <input id="machineid" name="machineid" value="" placeholder="Enter Machine Id" class="form-control here" type="number">
+                            </div>
+                        </div>
+                          <div class="form-group row">
+                            <label for="ip" class="col-4 col-form-label">IP_address</label>
+                            <div class="col-8">
+                                <input id="ip" name="ip" value="" placeholder="Enter IP_address" class="form-control here" type="number">
+                            </div>
+                        </div>
+                          <div class="form-group row">
+                            <label for="ram" class="col-4 col-form-label">RAM</label>
+                            <div class="col-8">
+                                <input id="ram" name="ram" value="" placeholder="Enter RAM Size" class="form-control here" type="number">
+                            </div>
+                        </div>
+                          <div class="form-group row">
+                            <label for="disk" class="col-4 col-form-label">Disk Size</label>
+                            <div class="col-8">
+                                <input id="disk" name="disk" value="" placeholder="Enter Disk Size" class="form-control here" type="number">
+                            </div>
+                        </div>
+                         <div class="form-group row">
+                            <label for="cpu" class="col-4 col-form-label">CPU_cores</label>
+                            <div class="col-8">
+                                <input id="cpu" name="cpu" value="" placeholder="Enter CPU_cores" class="form-control here" type="number">
+                            </div>
+                        </div>
+                         <div class="form-group row">
+                            <label for="price" class="col-4 col-form-label">Price</label>
+                            <div class="col-8">
+                                <input id="price" name="price" value="" placeholder="Enter Machine Price" class="form-control here" type="number">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="offset-4 col-8">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <button name="submit" type="submit" class="btn btn-primary btn-sm placeOrder" data-dismiss="modal">Order</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+      <footer class="footer">
+        <p>&copy; CMPE 226</p>
+      </footer>
+    </div>
+  </body>
+</html>

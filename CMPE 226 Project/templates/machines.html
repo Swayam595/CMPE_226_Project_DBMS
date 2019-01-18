@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Account Details</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/3.3/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="../static/css/signup.css" rel="stylesheet">
+    <script src="../static/js/machines.js"></script>
+</head>
+<body>
+<div class="container" style="font-size:small">
+    <div class="header">
+        <nav>
+            <ul class="nav nav-pills pull-right">
+                <li role="presentation" ><a href="showCustomerAccountDisplay">Dashboard</a></li>
+                <li role="presentation" class="active"><a href="showMachines">Machines Rented</a></li>
+                <li role="presentation" ><a href="showOrderHistory">Order History</a></li>
+                <li role="presentation"><a href="showBilling">Billing</a></li>
+                <li role="presentation"><a href="showProfile">Profile</a></li>
+                <li role="presentation" ><a href="showHelp">Help</a></li>
+                <li role="presentation" ><a href="/">Logout</a></li>
+            </ul>
+        </nav>
+        <h4 class="text-muted">Customer Dashboard</h4>
+    </div>
+    <div class="jumbotron">
+        <h2> <b>Welcome</b></h2>
+        <table class="table table-bordered">
+            <thead class = "table-dark">
+            <tr>
+                <th>Mac_id</th>
+                <th>Disk Size</th>
+                <th>RAM</th>
+                <th>CPU_Cores</th>
+                <th>Ip_address</th>
+                <th>Order_id</th>
+                <th>CA_id</th>
+            </tr>
+            </thead>
+            <tbody class="currentOrders">
+            </tbody>
+        </table>
+    </div>
+    <footer class="footer">
+        <p>&copy; CMPE 226</p>
+    </footer>
+</body>
+</html>

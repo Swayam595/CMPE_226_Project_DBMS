@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Account Details</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/3.3/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="../static/css/signup.css" rel="stylesheet">
+    <script src="../static/js/customerAccountDisplay.js"></script>
+</head>
+<body>
+<div class="container" style="font-size:small">
+    <div class="header">
+        <nav>
+            <ul class="nav nav-pills pull-right">
+                <li role="presentation" class="active"><a href="showCustomerAccountDisplay">Dashboard</a></li>
+                <li role="presentation" ><a href="showMachines">Machines Rented</a></li>
+                <li role="presentation" ><a href="showOrderHistory">Order History</a></li>
+                <li role="presentation"><a href="showBilling">Billing</a></li>
+                <li role="presentation"><a href="showProfile">Profile</a></li>
+                <li role="presentation" ><a href="showHelp">Help</a></li>
+                <li role="presentation" ><a href="/">Logout</a></li>
+            </ul>
+        </nav>
+        <h4 class="text-muted">Customer Dashboard</h4>
+    </div>
+    <div class="jumbotron">
+        <h2> <b>Ongoing Orders</b></h2>
+        <table class="table table-bordered">
+            <thead class = "table-dark">
+            <tr>
+                <th>Order_Id</th>
+                <th>Order Start Date</th>
+                <th>Number of Machines</th>
+                <th>CPU_Cores</th>
+                <th>RAM</th>
+                <th>Disk Size</th>
+                <th>End Order</th>
+            </tr>
+            </thead>
+            <tbody class="currentOrders">
+            </tbody>
+        </table>
+        <!-- <div class="button" style="padding-top: 20px"> -->
+        <button type="button" class="btn btn-primary btn-sm btn-block" data-toggle="modal" data-target="#myModal">Request New Machines</button>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" style="padding-top: 10px"><b>Machine Request Form</b></h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <form style="padding: 20px;" class="placeOrderForm">
+                        <div class="form-group row">
+                            <label for="inputOrderStartData" class="col-4 col-form-label">Order Date</label>
+                            <div class="col-8">
+                                <input id="inputOrderStartData" value="2018-11-11" name="inputOrderStartDate" placeholder="website" class="form-control here" type="date">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputRam" class="col-4 col-form-label">RAM*</label>
+                            <div class="col-8">
+                                <input id="inputRam" name="inputRam" value="4" placeholder="Enter RAM Size in Giga Bytes" class="form-control here" type="Number">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputCpu" class="col-4 col-form-label">CPU_Cores*</label>
+                            <div class="col-8">
+                                <input id="inputCpu" name="inputCpu" value="4" placeholder="Enter CPU Cores" class="form-control here" type="number">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputDiskSize" class="col-4 col-form-label">Disk Size*</label>
+                            <div class="col-8">
+                                <input id="inputDiskSize" name="inputDiskSize" value="2TB" placeholder="Enter Disk Size in Giga Bytes" class="form-control here">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputNoOfMachines" class="col-4 col-form-label">No of Machines*</label>
+                            <div class="col-8">
+                                <input id="inputNoOfMachines" name="inputNoOfMachines" value="2" placeholder="No. of Machines Required of this Config." class="form-control here" type="number">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="offset-4 col-8">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <button name="submit" type="submit" class="btn btn-primary btn-sm placeOrder" data-dismiss="modal">Order</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>&copy; CMPE 226</p>
+    </footer>
+</body>
+</html>

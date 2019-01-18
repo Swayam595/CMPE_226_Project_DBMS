@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Multicloud</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://getbootstrap.com/docs/3.3/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+  <link href="../static/css/signup.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="../static/js/signup.js"></script>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <nav>
+      <ul class="nav nav-pills pull-right">
+        <li role="presentation" ><a href="/">Home</a></li>
+        <li role="presentation"><a href="showLogin">Login</a></li>
+        <li role="presentation" class="active"><a href="#">Sign Up</a></li>
+      </ul>
+    </nav>
+    <h3 class="text-muted">Multicloud</h3>
+  </div>
+
+  <div class="jumbotron">
+    <h1>Multicloud</h1>
+    <form class="form-signin">
+      <label for="inputName" class="sr-only">Customer Name</label>
+      <input type="name" name="inputName" id="inputName" class="form-control" placeholder="Name" required autofocus>
+      <label for="inputEmail" class="sr-only">Customer Email address</label>
+      <input type="email" name="inputEmail" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input type="password" name="inputPassword" id="inputPassword" class="form-control" placeholder="Password" required>
+      <div class="dropdown">
+        <button class="roleBtnClass btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width: 100%; padding:0">
+          Choose Role<span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+          <li><a href="#" class="roleClass">csp</a></li>
+          <li><a href="#" class="roleClass">ca</a></li>
+          <li><a href="#" class="roleClass">customer</a></li>
+        </ul>
+      </div>
+      <label for="inputBankAccount" class="sr-only">Customer Bank Account Number</label>
+      <input type="name" name="inputBankAccount" id="inputBankAccount" class="form-control" placeholder="Bank Account Number" required autofocus>
+      <button id="btnSignUp" class="btn btn-lg btn-primary btn-block" type="button">Sign up</button>
+      <div class="registrationSuccess">User registration successful!</div>
+    </form>
+  </div>
+  <footer class="footer">
+    <p>&copy; CMPE 226</p>
+  </footer>
+</div>
+</body>
+</html>

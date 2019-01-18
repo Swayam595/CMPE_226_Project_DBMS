@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Multicloud</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://getbootstrap.com/docs/3.3/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+  <link href="../static/css/signup.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="../static/js/login.js"></script>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <nav>
+      <ul class="nav nav-pills pull-right">
+        <li role="presentation" ><a href="/">Home</a></li>
+        <li role="presentation" class="active"><a href="#">Login</a></li>
+        <li role="presentation"><a href="showSignUp">Sign Up</a></li>
+      </ul>
+    </nav>
+    <h3 class="text-muted">Multicloud</h3>
+  </div>
+  <div class="jumbotron">
+    <h1>Multicloud</h1>
+    <form class="form-login">
+      <label for="inputEmailLogin" class="sr-only">Email address</label>
+      <input type="email" name="inputEmailLogin" id="inputEmailLogin" class="form-control" placeholder="Email address" required autofocus>
+      <div class="dropdown">
+        <button class="roleBtnClass btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width: 100%; padding:0">
+          Choose Role<span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+          <li><a href="#" class="roleClass">csp</a></li>
+          <li><a href="#" class="roleClass">ca</a></li>
+          <li><a href="#" class="roleClass">customer</a></li>
+        </ul>
+      </div>
+      <label for="inputPasswordLogin" class="sr-only">Password</label>
+      <input type="password" name="inputPasswordLogin" id="inputPasswordLogin" class="form-control" placeholder="Password" required>
+      <button id="btnLogin" class="btn btn-lg btn-primary btn-block" type="button">Login</button>
+      <div class="errorText"></div>
+    </form>
+  </div>
+  <footer class="footer">
+    <p>&copy; CMPE 226</p>
+  </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Multicloud</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/3.3/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    <link href="../static/css/signup.css" rel="stylesheet">
+    <script>
+        sessionStorage.setItem("ca_id", "123");
+        sessionStorage.setItem("id", "123");
+        sessionStorage.setItem("role", "");
+        sessionStorage.setItem("email_id", "");
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <nav>
+                <ul class="nav nav-pills pull-right">
+                    <li role="presentation" class="active"><a href="#">Home</a>
+                    </li>
+                    <li role="presentation"><a href="showLogin">Login</a>
+                    </li>
+                    <li role="presentation"><a href="showSignUp">Sign Up</a>
+                    </li>
+                </ul>
+            </nav>
+            <h3 class="text-muted">Admin Dashboard</h3>
+        </div>
+        <div class="jumbotron cloudImg">
+            <h1>Multicloud</h1>
+            <p class="lead"></p>
+            <p><a class="btn btn-lg btn-success" href="showSignUp" role="button">Sign up today</a>
+            </p>
+        </div>
+        <div class="row marketing" style="text-align: center">
+            Multi-Cloud DBMS is the agnostic cloud provider which provides range of options to fit every customer needs. To make our service affordable to user we buy cloud space from multiple Cloud Service Provider and use them as per the requirement.
+        </div>
+        <div class="row marketing">
+            <div class="col-lg-6">
+                <h4>Cost effective</h4>
+                <p>Get cloud in most cost effective manner.</p>
+                <h4>Scalable</h4>
+                <p>Increase number machines anytime.</p>
+                <h4>Security</h4>
+                <p>Get enhanced security.</p>
+            </div>
+            <div class="col-lg-6">
+                <h4>Flexible</h4>
+                <p>Can change any number of machines.</p>
+                <h4>Agility</h4>
+                <p>Start your cloud instantly.</p>
+                <h4>Development friendly</h4>
+                <p>Easy access to machines.</p>
+            </div>
+        </div>
+        <footer class="footer">
+            <p>&copy; CMPE 226</p>
+        </footer>
+    </div>
+</body>
+</html>

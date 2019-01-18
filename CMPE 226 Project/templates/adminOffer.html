@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Account Details</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/3.3/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="../static/css/signup.css" rel="stylesheet">
+    <script src="../static/js/jquery-3.3.1.js"></script>
+    <script src="../static/js/adminOffer.js"></script>
+  </head>
+  <body>
+    <div class="container" style="font-size:small">
+      <div class="header">
+        <nav>
+              <ul class="nav nav-pills pull-right">
+     <li role="presentation" ><a href="showAdmin">Dashboard</a></li>
+              <li role="presentation" ><a href="showAdminMachines">Machines</a></li>
+            <li role="presentation" ><a href="showAdminOrder">Orders</a></li>
+            <li role="presentation"><a href="showAdminCustomers">Customer</a></li>
+            <li role="presentation"><a href="showAdminCSP">CSP</a></li>
+                  <li role="presentation" class="active"><a href="showAdminOffer">Offers/Plans</a></li>
+                   <li role="presentation" ><a href="showAdminBilling">Billing</a></li>
+				    <li role="presentation" ><a href="showAdminComplaints">Complaints</a></li>
+                 <li role="presentation" ><a href="showAdminProfile">Profile</a></li>
+				<li role="presentation" ><a href="/">Logout</a></li>
+          </ul>
+        </nav>
+        <h4 class="text-muted">Admin Dashboard</h4>
+      </div>
+
+      <div class="jumbotron">
+        <h2> <b>Cloud Aggregator</b></h2>
+            <h3>Customer Offers/Plans</h3>
+
+          <table class="table table-bordered">
+
+        <thead class = "table-dark">
+
+            <tr>
+                <th>Offer_Id</th>
+                <th>Offer Name</th>
+                <th>Discount</th>
+                 <th>Delete Offer</th>
+            </tr>
+        </thead>
+        <tbody class="currentOrders">
+        </tbody>
+		</table>
+          <button type="button" class="btn btn-primary btn-sm btn-block" data-toggle="modal" data-target="#myModalApply">New Offer/Plan</button>
+
+        <!-- Modal for apply offer -->
+          <div class="modal fade" id="myModalApply" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" style="padding-top: 10px"><b>New Offer/Plan</b></h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <form style="padding: 20px;" class="newOfferForm">
+                        <div class="form-group row">
+                            <label for="inputName" class="col-4 col-form-label">Offer_Name*</label>
+                            <div class="col-8">
+                                <input id="inputName" name="inputName" value="" placeholder="Enter offer name" class="form-control here" type="text">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputDiscount" class="col-4 col-form-label">Discount</label>
+                            <div class="col-8">
+                                <input id="inputDiscount" name="inputDiscount" value="" placeholder="Enter discount %" class="form-control here" type="number">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="offset-4 col-8">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <button name="newOffer" type="button" class="btn btn-primary btn-sm newOffer" data-dismiss="modal">Apply</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+   <div class="panel panel-danger">
+                <div class="panel-heading" ><h4> </h4> </div>
+
+   </div>
+</div>
+
+
+
+
+
+      <footer class="footer">
+        <p>&copy; CMPE 226</p>
+      </footer>
+    </div>
+  </body>
+</html>

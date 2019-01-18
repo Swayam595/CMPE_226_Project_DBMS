@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Account Details</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/3.3/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link href="../static/css/signup.css" rel="stylesheet">
+    <script src="../static/js/jquery-3.3.1.js"></script>
+    <script src="../static/js/help.js"></script>
+</head>
+<body>
+<div class="container" style="font-size:small">
+    <div class="header">
+        <nav>
+            <ul class="nav nav-pills pull-right">
+                <li role="presentation" ><a href="showCustomerAccountDisplay">Dashboard</a></li>
+                <li role="presentation" ><a href="showMachines">Machines Rented</a></li>
+                <li role="presentation" ><a href="showOrderHistory">Order History</a></li>
+                <li role="presentation"><a href="showBilling">Billing</a></li>
+                <li role="presentation"><a href="showProfile">Profile</a></li>
+                <li role="presentation" class="active"><a href="showHelp">Help</a></li>
+                <li role="presentation" ><a href="/">Logout</a></li>
+            </ul>
+        </nav>
+        <h4 class="text-muted">Customer Dashboard</h4>
+    </div>
+    <div class="jumbotron" style="overflow: auto;">
+        <div class="row">
+            <div class="col-md-12">
+                <form>
+                    <div class="form-group row">
+                        <label for="inputProblemTitle" class="col-4 col-form-label">Problem Title*</label>
+                        <div class="col-8">
+                            <input id="inputProblemTitle" name="inputProblemTitle" placeholder="Problem Title" class="form-control here" required="required" type="text">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="inputProblemDescription" class="col-4 col-form-label">Problem Description*</label>
+                        <div class="col-8">
+                            <textarea id="inputProblemDescription" name="inputProblemDescription" cols="40" rows="4" class="form-control"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="offset-4 col-8">
+                            <button name="help" type="button" class="btn btn-primary help">Submit Complaint</button>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="offset-4 col-8 ticketSuccess">
+                            Ticket created successfully!!
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <table class="table table-bordered">
+
+        <thead class = "table-dark">
+
+            <tr>
+                <th>Issue id</th>
+                <th>Issue title</th>
+                 <th>Issue description</th>
+                <th>Issue date</th>
+                <th>Is resolved</th>
+            </tr>
+
+        </thead>
+
+
+        <tbody class="orderHistory">
+
+        </tbody>
+		</table>
+
+    </div>
+    <footer class="footer">
+        <p>&copy; CMPE 226</p>
+    </footer>
+</div>
+</div>
+</body>
+</html>
